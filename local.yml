@@ -1,0 +1,146 @@
+---
+- hosts: localhost
+  connection: local
+  become: true
+
+  tasks:
+  - name: install packages
+    package:
+      name:
+        - htop
+        - pacman-contrib
+        - vim
+        - alacritty
+        - starship
+        - ranger
+        - exa
+        - gimp
+        - gparted
+        - okular
+        - vlc
+        - code
+        - dolphin
+        - dunst
+        - neofetch
+        - libreoffice-fresh
+        - gparted
+        - qbittorrent
+        - thunderbird
+        - nitrogen
+        - feh
+        - cronie
+        - openssh
+        - xterm
+        - dmenu
+        - rofi
+        - firefox
+        - xmonad
+        - xmonad-contrib
+        - i3
+        - i3blocks
+        - i3lock
+        - xmobar
+        - trayer
+        - plasma
+        - kde-applications
+        - tigervnc
+        - neovim
+        - nodejs
+        - npm
+        - zsh
+        - ttf-font-awesome
+        - otf-font-awesome
+        - ttf-sourcecodepro-nerd
+        - ttf-ubuntu-font-family
+        - ttf-mononoki-nerd
+        - lxappearance
+        - xdotool
+        - picom
+
+  - name: Start SSHD
+    service:
+      name: sshd
+      state: started
+      enabled: yes
+
+  - name: Start cronie.service
+    service:
+      name: cronie
+      state: started
+      enabled: yes
+
+  - name: Copy alacritty
+    copy:
+      src: files/alacritty
+      dest: /home/fred/.config/i3
+      owner: fred
+      group: fred
+
+  - name: Copy Bashrc
+    copy:
+      src: files/bashrc
+      dest: /home/fred/.bashrc
+      owner: fred
+      group: fred
+
+  - name: Copy Conky
+    copy:
+      src: files/conky
+      dest: /home/fred/.config
+      owner: fred
+      group: fred
+
+  - name: Copy i3
+    copy:
+      src: files/i3
+      dest: /home/fred/.config
+      owner: fred
+      group: fred
+
+  - name: Copy tmux.conf
+    copy:
+      src: files/tmux.conf
+      dest: /home/fred/.config
+      owner: fred
+      group: fred
+
+  - name: Copy vnc
+    copy:
+      src: files/vnc
+      dest: /home/fred/.vnc
+      owner: fred
+      group: fred
+
+  - name: Copy wallpapers
+    copy:
+      src: files/wallpapers
+      dest: /home/fred
+      owner: fred
+      group: fred
+
+  - name: Copy xmonad
+    copy:
+      src: files/xmonad
+      dest: /home/fred
+      owner: fred
+      group: fred
+
+  - name: Add ansible user
+    user:
+      name: velociraptor
+      system: yes
+
+  - name: Set up sudo for ansible user
+    copy:
+      src: files/sudoer_velociraptor
+      dest: /etc/sudoers.d/velociraptor
+      owner: root
+      group: root
+      mode: 0440
+
+  - name: add ansible-pull cron job
+    cron:
+      name: Ansible auto-provision
+      user: velociraptor
+      minute: "*/1"
+      job: ansible-pull -o -U https://github.com/rider48371/ansible.git

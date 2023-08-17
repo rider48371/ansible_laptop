@@ -1,0 +1,45 @@
+#!/usr/bin/env bash
+#use arandr to save the correct resolution - see next line
+#sh ~/.screenlayout/monitor.sh &
+
+function run {
+  if ! pgrep $1 ;
+  then
+    $@&
+  fi
+}
+
+dex $HOME/.config/autostart/arcolinux-welcome-app.desktop
+
+exec nitrogen --restore &
+
+exec ~/.config/polybar/launch.sh &
+
+exec sxhkd -c ~/.config/worm/sxhkd/sxhkdrc &
+
+wormc frame-active-pixel $((16#FF5294e2))
+wormc frame-inactive-pixel $((16#FF7c818c))
+wormc frame-height 0
+wormc text-font 'Noto Sans Mono:size=10'
+wormc border-width 2
+wormc border-active-pixel $((16#FF5294e2))
+wormc border-inactive-pixel $((16#FF7c818c))
+
+wormc struts 40 10 10 10
+wormc gaps 3
+
+wormc layout tiling
+#wormc layout floating
+
+#start the conky to learn the shortcuts
+(conky -c $HOME/.config/worm/system-overview) &
+
+run variety &
+run nm-applet &
+run pamac-tray &
+run xfce4-power-manager &
+numlockx on &
+blueberry-tray &
+picom --config $HOME/.config/worm/picom.conf &
+/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
+/usr/lib/xfce4/notifyd/xfce4-notifyd &
