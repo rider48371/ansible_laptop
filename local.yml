@@ -37,6 +37,7 @@
         - xmonad-contrib
         - i3
         - i3blocks
+        - network-manager-applet
         - acpi
         - python3
         - i3lock
