@@ -38,6 +38,8 @@
         - xmonad-contrib
         - i3
         - i3blocks
+        - acpi
+        - python3
         - i3lock
         - xmobar
         - trayer
