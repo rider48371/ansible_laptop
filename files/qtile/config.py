@@ -16,7 +16,7 @@ from qtile_extras.widget.decorations import BorderDecoration
 
 mod = "mod4"              # Sets mod key to SUPER/WINDOWS
 myTerm = "alacritty"      # My terminal of choice
-myBrowser = "qutebrowser" # My browser of choice
+myBrowser = "firefox" # My browser of choice
 
 keys = [
          ### The essentials
@@ -25,12 +25,12 @@ keys = [
              desc='Launches My Terminal'
              ),
          Key([mod, "shift"], "Return",
-             lazy.spawn("dm-run"),
+             lazy.spawn("rofi -show run"),
              desc='Run Launcher'
              ),
          Key([mod], "b",
              lazy.spawn(myBrowser),
-             desc='Qutebrowser'
+             desc='Firefox'
              ),
          # Key([mod], "/",
          #     lazy.spawn("dtos-help"),
@@ -52,40 +52,9 @@ keys = [
              lazy.spawn("dm-logout"),
              desc='Logout menu'
              ),
-         Key(["control", "shift"], "e",
-             lazy.spawn("emacsclient -c -a emacs"),
-             desc='Doom Emacs'
-             ),
-         ### Switch focus to specific monitor (out of three)
-         Key([mod], "w",
-             lazy.to_screen(0),
-             desc='Keyboard focus to monitor 1'
-             ),
-         Key([mod], "e",
-             lazy.to_screen(1),
-             desc='Keyboard focus to monitor 2'
-             ),
-         Key([mod], "r",
-             lazy.to_screen(2),
-             desc='Keyboard focus to monitor 3'
-             ),
-         ### Switch focus of monitors
-         Key([mod], "period",
-             lazy.next_screen(),
-             desc='Move focus to next monitor'
-             ),
-         Key([mod], "comma",
-             lazy.prev_screen(),
-             desc='Move focus to prev monitor'
-             ),
-         ### Treetab controls
-          Key([mod, "shift"], "h",
-             lazy.layout.move_left(),
-             desc='Move up a section in treetab'
-             ),
-         Key([mod, "shift"], "l",
-             lazy.layout.move_right(),
-             desc='Move down a section in treetab'
+         Key(["control", "shift"], "f",
+             lazy.spawn("alacritty -e ranger"),
+             desc='Ranger'
              ),
          ### Window controls
          Key([mod], "j",
@@ -146,107 +115,6 @@ keys = [
              lazy.layout.toggle_split(),
              desc='Toggle between split and unsplit sides of stack'
              ),
-         # Emacs programs launched using the key chord CTRL+e followed by 'key'
-         KeyChord([mod],"e", [
-             Key([], "e",
-                 lazy.spawn("emacsclient -c -a 'emacs'"),
-                 desc='Emacsclient Dashboard'
-                 ),
-             Key([], "a",
-                 lazy.spawn("emacsclient -c -a 'emacs' --eval '(emms)' --eval '(emms-play-directory-tree \"~/Music/\")'"),
-                 desc='Emacsclient EMMS (music)'
-                 ),
-             Key([], "b",
-                 lazy.spawn("emacsclient -c -a 'emacs' --eval '(ibuffer)'"),
-                 desc='Emacsclient Ibuffer'
-                 ),
-             Key([], "d",
-                 lazy.spawn("emacsclient -c -a 'emacs' --eval '(dired nil)'"),
-                 desc='Emacsclient Dired'
-                 ),
-             Key([], "i",
-                 lazy.spawn("emacsclient -c -a 'emacs' --eval '(erc)'"),
-                 desc='Emacsclient ERC (IRC)'
-                 ),
-             Key([], "n",
-                 lazy.spawn("emacsclient -c -a 'emacs' --eval '(elfeed)'"),
-                 desc='Emacsclient Elfeed (RSS)'
-                 ),
-             Key([], "s",
-                 lazy.spawn("emacsclient -c -a 'emacs' --eval '(eshell)'"),
-                 desc='Emacsclient Eshell'
-                 ),
-             Key([], "v",
-                 lazy.spawn("emacsclient -c -a 'emacs' --eval '(+vterm/here nil)'"),
-                 desc='Emacsclient Vterm'
-                 ),
-             Key([], "w",
-                 lazy.spawn("emacsclient -c -a 'emacs' --eval '(doom/window-maximize-buffer(eww \"distro.tube\"))'"),
-                 desc='Emacsclient EWW Browser'
-                 )
-         ]),
-         # Dmenu scripts launched using the key chord SUPER+p followed by 'key'
-         KeyChord([mod], "p", [
-             Key([], "h",
-                 lazy.spawn("dm-hub"),
-                 desc='List all dmscripts'
-                 ),
-             Key([], "a",
-                 lazy.spawn("dm-sounds"),
-                 desc='Choose ambient sound'
-                 ),
-             Key([], "b",
-                 lazy.spawn("dm-setbg"),
-                 desc='Set background'
-                 ),
-             Key([], "c",
-                 lazy.spawn("dtos-colorscheme"),
-                 desc='Choose color scheme'
-                 ),
-             Key([], "e",
-                 lazy.spawn("dm-confedit"),
-                 desc='Choose a config file to edit'
-                 ),
-             Key([], "i",
-                 lazy.spawn("dm-maim"),
-                 desc='Take a screenshot'
-                 ),
-             Key([], "k",
-                 lazy.spawn("dm-kill"),
-                 desc='Kill processes '
-                 ),
-             Key([], "m",
-                 lazy.spawn("dm-man"),
-                 desc='View manpages'
-                 ),
-             Key([], "n",
-                 lazy.spawn("dm-note"),
-                 desc='Store and copy notes'
-                 ),
-             Key([], "o",
-                 lazy.spawn("dm-bookman"),
-                 desc='Browser bookmarks'
-                 ),
-             Key([], "p",
-                 lazy.spawn("passmenu -p \"Pass: \""),
-                 desc='Logout menu'
-                 ),
-             Key([], "q",
-                 lazy.spawn("dm-logout"),
-                 desc='Logout menu'
-                 ),
-             Key([], "r",
-                 lazy.spawn("dm-radio"),
-                 desc='Listen to online radio'
-                 ),
-             Key([], "s",
-                 lazy.spawn("dm-websearch"),
-                 desc='Search various engines'
-                 ),
-             Key([], "t",
-                 lazy.spawn("dm-translate"),
-                 desc='Translate text'
-                 )
          ])
 ]
 
@@ -577,19 +445,19 @@ def init_widgets_list():
               ]
     return widgets_list
 
-def init_widgets_screen1():
-    widgets_screen1 = init_widgets_list()
-    del widgets_screen1[9:10]               # Slicing removes unwanted widgets (systray) on Monitors 1,3
-    return widgets_screen1
+#def init_widgets_screen1():
+#    widgets_screen1 = init_widgets_list()
+#    del widgets_screen1[9:10]               # Slicing removes unwanted widgets (systray) on Monitors 1,3
+#    return widgets_screen1
 
-def init_widgets_screen2():
-    widgets_screen2 = init_widgets_list()
-    return widgets_screen2                 # Monitor 2 will display all widgets in widgets_list
+#def init_widgets_screen2():
+#    widgets_screen2 = init_widgets_list()
+#    return widgets_screen2                 # Monitor 2 will display all widgets in widgets_list
 
-def init_screens():
-    return [Screen(top=bar.Bar(widgets=init_widgets_screen1(), opacity=1.0, size=20)),
-            Screen(top=bar.Bar(widgets=init_widgets_screen2(), opacity=1.0, size=20)),
-            Screen(top=bar.Bar(widgets=init_widgets_screen1(), opacity=1.0, size=20))]
+#def init_screens():
+#    return [Screen(top=bar.Bar(widgets=init_widgets_screen1(), opacity=1.0, size=20)),
+#            Screen(top=bar.Bar(widgets=init_widgets_screen2(), opacity=1.0, size=20)),
+#            Screen(top=bar.Bar(widgets=init_widgets_screen1(), opacity=1.0, size=20))]
 
 if __name__ in ["config", "__main__"]:
     screens = init_screens()
@@ -606,23 +474,6 @@ def window_to_next_group(qtile):
     if qtile.currentWindow is not None:
         i = qtile.groups.index(qtile.currentGroup)
         qtile.currentWindow.togroup(qtile.groups[i + 1].name)
-
-def window_to_previous_screen(qtile):
-    i = qtile.screens.index(qtile.current_screen)
-    if i != 0:
-        group = qtile.screens[i - 1].group.name
-        qtile.current_window.togroup(group)
-
-def window_to_next_screen(qtile):
-    i = qtile.screens.index(qtile.current_screen)
-    if i + 1 != len(qtile.screens):
-        group = qtile.screens[i + 1].group.name
-        qtile.current_window.togroup(group)
-
-def switch_screens(qtile):
-    i = qtile.screens.index(qtile.current_screen)
-    group = qtile.screens[i - 1].group
-    qtile.current_screen.set_group(group)
 
 mouse = [
     Drag([mod], "Button1", lazy.window.set_position_floating(),
@@ -644,8 +495,6 @@ floating_layout = layout.Floating(float_rules=[
     *layout.Floating.default_float_rules,
     Match(title='Confirmation'),      # tastyworks exit box
     Match(title='Qalculate!'),        # qalculate-gtk
-    Match(wm_class='kdenlive'),       # kdenlive
-    Match(wm_class='pinentry-gtk-2'), # GPG key password entry
 ])
 auto_fullscreen = True
 focus_on_window_activation = "smart"
