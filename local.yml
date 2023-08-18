@@ -44,8 +44,8 @@
         - i3lock
         - xmobar
         - trayer
-        - plasma
-        - kde-applications
+        - qtile
+        - python-dbus-next
         - tigervnc
         - neovim
         - nodejs
