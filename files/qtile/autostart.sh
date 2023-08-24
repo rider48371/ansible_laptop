@@ -1,8 +1,8 @@
 #!/usr/bin/env bash 
 
-COLORSCHEME="DoomOne"
+#COLORSCHEME="DoomOne"
 
-festival --tts $HOME/.config/qtile/welcome_msg &
+#festival --tts $HOME/.config/qtile/welcome_msg &
 lxsession &
 picom &
 #/usr/bin/emacs --daemon &
@@ -21,4 +21,4 @@ blueberry-tray &
 # 3. Uncomment to set wallpaper with nitrogen
 # nitrogen --restore &
 # 4. Uncomment to set random wallpaper with feh
-feh --bg-fill --randomize /home/fred/wallpapers/*
+feh --bg-fill --randomize /home/fred/wallpapers/* &

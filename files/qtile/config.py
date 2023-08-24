@@ -459,10 +459,10 @@ def init_widgets_list():
 #            Screen(top=bar.Bar(widgets=init_widgets_screen1(), opacity=1.0, size=20))]
 
 if __name__ in ["config", "__main__"]:
-    screens = init_screens()
+    #screens = init_screens()
     widgets_list = init_widgets_list()
-    widgets_screen1 = init_widgets_screen1()
-    widgets_screen2 = init_widgets_screen2()
+    #widgets_screen1 = init_widgets_screen1()
+    #widgets_screen2 = init_widgets_screen2()
 
 def window_to_prev_group(qtile):
     if qtile.currentWindow is not None:
