@@ -11,6 +11,7 @@
         - pacman-contrib
         - vim
         - alacritty
+        - conky
         - starship
         - ranger
         - exa
@@ -96,6 +97,13 @@
   - name: Copy i3
     copy:
       src: files/i3
+      dest: /home/fred/.config
+      owner: fred
+      group: fred
+
+  - name: Copy qtile
+    copy:
+      src: files/qtile
       dest: /home/fred/.config
       owner: fred
       group: fred
