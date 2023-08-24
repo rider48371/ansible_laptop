@@ -115,7 +115,6 @@ keys = [
              lazy.layout.toggle_split(),
              desc='Toggle between split and unsplit sides of stack'
              ),
-         ])
 ]
 
 groups = [Group("DEV", layout='monadtall'),
