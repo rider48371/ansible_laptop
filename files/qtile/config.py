@@ -177,7 +177,8 @@ layouts = [
     layout.Floating(**layout_theme)
 ]
 
-colors = [["#282c34", "#282c34"],
+def init_colors():
+    return [["#282c34", "#282c34"],
           ["#1c1f24", "#1c1f24"],
           ["#dfdfdf", "#dfdfdf"],
           ["#ff6c6b", "#ff6c6b"],
@@ -187,6 +188,8 @@ colors = [["#282c34", "#282c34"],
           ["#c678dd", "#c678dd"],
           ["#46d9ff", "#46d9ff"],
           ["#a9a1e1", "#a9a1e1"]]
+
+colors = init_colors()
 
 prompt = "{0}@{1}: ".format(os.environ["USER"], socket.gethostname())
 
@@ -444,25 +447,21 @@ def init_widgets_list():
               ]
     return widgets_list
 
-#def init_widgets_screen1():
-#    widgets_screen1 = init_widgets_list()
-#    del widgets_screen1[9:10]               # Slicing removes unwanted widgets (systray) on Monitors 1,3
-#    return widgets_screen1
 
-#def init_widgets_screen2():
-#    widgets_screen2 = init_widgets_list()
-#    return widgets_screen2                 # Monitor 2 will display all widgets in widgets_list
+widgets_list = init_widgets_list()
 
-#def init_screens():
-#    return [Screen(top=bar.Bar(widgets=init_widgets_screen1(), opacity=1.0, size=20)),
-#            Screen(top=bar.Bar(widgets=init_widgets_screen2(), opacity=1.0, size=20)),
-#            Screen(top=bar.Bar(widgets=init_widgets_screen1(), opacity=1.0, size=20))]
 
-if __name__ in ["config", "__main__"]:
-    #screens = init_screens()
-    widgets_list = init_widgets_list()
-    #widgets_screen1 = init_widgets_screen1()
-    #widgets_screen2 = init_widgets_screen2()
+def init_widgets_screen1():
+    widgets_screen1 = init_widgets_list()
+    return widgets_screen1
+
+
+widgets_screen1 = init_widgets_screen1()
+
+
+def init_screens():
+    return [Screen(top=bar.Bar(widgets=init_widgets_screen1(), size=28, opacity=0.97))]
+screens = init_screens()
 
 def window_to_prev_group(qtile):
     if qtile.currentWindow is not None:
