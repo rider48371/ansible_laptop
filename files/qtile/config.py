@@ -274,10 +274,6 @@ def init_widgets_list():
                        background = colors[0],
                        padding = 0
                        ),
-              #widget.Systray(
-              #         background = colors[0],
-              #         padding = 5
-              #         ),
               widget.Sep(
                        linewidth = 0,
                        padding = 6,
@@ -306,14 +302,14 @@ def init_widgets_list():
                        background = colors[0]
                        ),
               widget.ThermalSensor(
-                       foreground = colors[4],
+                       foreground = colors[3],
                        background = colors[0],
                        threshold = 90,
                        fmt = 'Temp: {}',
                        padding = 5,
                        decorations=[
                            BorderDecoration(
-                               colour = colors[4],
+                               colour = colors[3],
                                border_width = [0, 0, 2, 0],
                                padding_x = 5,
                                padding_y = None,
@@ -326,25 +322,21 @@ def init_widgets_list():
                        foreground = colors[0],
                        background = colors[0]
                        ),
-              widget.CheckUpdates(
-                       update_interval = 1800,
-                       distro = "Arch_checkupdates",
-                       display_format = "Updates: {updates} ",
-                       foreground = colors[5],
-                       colour_have_updates = colors[5],
-                       colour_no_updates = colors[5],
-                       mouse_callbacks = {'Button1': lambda: qtile.cmd_spawn(myTerm + ' -e sudo pacman -Syu')},
-                       padding = 5,
-                       background = colors[0],
-                       decorations=[
-                           BorderDecoration(
-                               colour = colors[5],
-                               border_width = [0, 0, 2, 0],
-                               padding_x = 5,
-                               padding_y = None,
-                           )
-                       ],
-                       ),
+              widget.DF(
+                        visible_on_warn = False,
+                        background = colors[0],
+                        foreground = colors[4],
+                        font = "Ubuntu Bold",
+                        decorations = [
+                            BorderDecoration (
+                                colour = colors[4],
+                                border_width = [0,0,2,0],
+                                padding_x = 5,
+                                radius = 2,
+                                filled = True
+                            ),
+                        ],
+                        ),
               widget.Sep(
                        linewidth = 0,
                        padding = 6,
@@ -393,16 +385,13 @@ def init_widgets_list():
                        foreground = colors[0],
                        background = colors[0]
                        ),
-
-
-              widget.KeyboardLayout(
-                       foreground = colors[8],
+              widget.Clock(
+                       foreground = colors[6],
                        background = colors[0],
-                       fmt = 'Keyboard: {}',
-                       padding = 5,
+                       format = "  %A, %B %d - %I:%M %p ",
                        decorations=[
                            BorderDecoration(
-                               colour = colors[8],
+                               colour = colors[6],
                                border_width = [0, 0, 2, 0],
                                padding_x = 5,
                                padding_y = None,
@@ -415,21 +404,12 @@ def init_widgets_list():
                        foreground = colors[0],
                        background = colors[0]
                        ),
-              widget.Clock(
-                       foreground = colors[6],
-                       background = colors[0],
-                       format = "%A, %B %d - %I:%M %p ",
-                       decorations=[
-                           BorderDecoration(
-                               colour = colors[6],
-                               border_width = [0, 0, 2, 0],
-                               padding_x = 5,
-                               padding_y = None,
-                           )
-                       ],
-
-                       ),
-
+              widget.UPowerWidget(
+                        background = colors[0],
+                        border_colour = '#d8dee9',
+                        border_critical_colour = '#bf616a',
+                        padding_x = 5
+                        ),
               widget.Sep(
                        linewidth = 0,
                        padding = 6,
