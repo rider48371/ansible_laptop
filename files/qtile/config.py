@@ -343,6 +343,29 @@ def init_widgets_list():
                        foreground = colors[0],
                        background = colors[0]
                        ),
+
+              widget.DF(
+                        visible_on_warn = False,
+                        background = colors[0],
+                        foreground = colors[5],
+                        font = "Ubuntu Bold",
+                        partition = "/home",
+                        decorations = [
+                            BorderDecoration (
+                                colour = colors[5],
+                                border_width = [0,0,2,0],
+                                padding_x = 5,
+                                radius = 2,
+                                filled = True
+                            ),
+                        ],
+                        ),
+              widget.Sep(
+                       linewidth = 0,
+                       padding = 6,
+                       foreground = colors[0],
+                       background = colors[0]
+                       ),
               widget.Memory(
                        foreground = colors[9],
                        background = colors[0],
