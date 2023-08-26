@@ -28,7 +28,7 @@ keys = [
              lazy.spawn("rofi -show run"),
              desc='Run Launcher'
              ),
-         Key([mod], "b",
+         Key([mod, "shift"], "b",
              lazy.spawn(myBrowser),
              desc='Firefox'
              ),
@@ -52,7 +52,7 @@ keys = [
              lazy.spawn("dm-logout"),
              desc='Logout menu'
              ),
-         Key(["control", "shift"], "f",
+         Key([mod, "shift"], "f",
              lazy.spawn("alacritty -e ranger"),
              desc='Ranger'
              ),
@@ -93,7 +93,7 @@ keys = [
              lazy.layout.maximize(),
              desc='toggle window between minimum and maximum sizes'
              ),
-         Key([mod, "shift"], "f",
+         Key(["control", "shift"], "f",
              lazy.window.toggle_floating(),
              desc='toggle floating'
              ),
@@ -274,10 +274,10 @@ def init_widgets_list():
                        background = colors[0],
                        padding = 0
                        ),
-              widget.Systray(
-                       background = colors[0],
-                       padding = 5
-                       ),
+              #widget.Systray(
+              #         background = colors[0],
+              #         padding = 5
+              #         ),
               widget.Sep(
                        linewidth = 0,
                        padding = 6,
@@ -415,18 +415,10 @@ def init_widgets_list():
                        foreground = colors[0],
                        background = colors[0]
                        ),
-              widget.AnalogueClock(
-                       background = colors[0],
-                       face_shape = "square",
-                       face_background = colors[6],
-                       face_border_colour = colors[6],
-                       face_border_width = 4,
-                       padding = 5
-                       ),
               widget.Clock(
                        foreground = colors[6],
                        background = colors[0],
-                       format = "%A, %B %d - %H:%M ",
+                       format = "%A, %B %d - %I:%M %p ",
                        decorations=[
                            BorderDecoration(
                                colour = colors[6],
@@ -443,6 +435,10 @@ def init_widgets_list():
                        padding = 6,
                        foreground = colors[0],
                        background = colors[0]
+                       ),
+              widget.Systray(
+                       background = colors[0],
+                       padding = 5
                        ),
               ]
     return widgets_list
