@@ -7,7 +7,7 @@ lxsession &
 picom &
 #/usr/bin/emacs --daemon &
 killall conky &
-sleep 3 && conky -c "$HOME"/.config/conky/qtile/"$COLORSCHEME"-01.conkyrc
+sleep 3 && conky -c "$HOME"/.config/conky/qtile/conkyrc
 killall volumeicon &
 volumeicon &
 nm-applet &
