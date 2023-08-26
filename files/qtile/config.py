@@ -49,8 +49,8 @@ keys = [
              desc='Restart Qtile'
              ),
          Key([mod, "shift"], "q",
-             lazy.spawn("dm-logout"),
-             desc='Logout menu'
+             lazy.shutdown(),
+             desc='Shutdown Qtile'
              ),
          Key([mod, "shift"], "f",
              lazy.spawn("alacritty -e ranger"),
