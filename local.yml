@@ -12,6 +12,7 @@
         - lxsession
         - volumeicon
         - rclone
+        - caprine
         - pacman-contrib
         - vim
         - alacritty
