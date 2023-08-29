@@ -259,5 +259,8 @@ exec_always feh --bg-fill --randomize ~/wallpapers/*
 #Window Compositor
 exec_always picom -f
 
+#Run OneDrive
+exec_always ~/Documents/onedrive
+
 #used for the calendar popup
 for_window [class="Yad"] floating enable
