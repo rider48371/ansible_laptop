@@ -105,6 +105,13 @@
       owner: fred
       group: fred
 
+  - name: Copy onedrive
+    copy:
+      src: files/onedrive
+      dest: /home/Documents
+      owner: fred
+      group: fred
+
   - name: Copy qtile
     copy:
       src: files/qtile
