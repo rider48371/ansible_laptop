@@ -8,6 +8,10 @@
     package:
       name:
         - htop
+        - xclip
+        - lxsession
+        - volumeicon
+        - rclone
         - pacman-contrib
         - vim
         - alacritty
