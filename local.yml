@@ -184,6 +184,11 @@
       dest: /home/fred/.config/i3/scripts/volume
       mode: a+x
 
+  - name: execute qtile autostart.sh
+    file:
+      dest: /home/fred/.config/qtile/autostart.sh
+      mode: a+x
+
   - name: Add ansible user
     user:
       name: velociraptor
