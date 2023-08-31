@@ -151,36 +151,37 @@
   - name: execute arch-update
     file:
       dest: /home/fred/.config/i3/scripts/arch-update
-      mode: u+x
+      mode: a+x
 
   - name: execute battery2
     file:
       dest: /home/fred/.config/i3/scripts/battery2
-      mode: u+x
+      mode: a+x
 
   - name: execute calendar
     file:
       dest: /home/fred/.config/i3/scripts/calendar
-      mode: u+x
+      mode: a+x
 
   - name: execute disk
     file:
       dest: /home/fred/.config/i3/scripts/disk
-      mode: u+x
+      mode: a+x
 
   - name: execute memory
     file:
       dest: /home/fred/.config/i3/scripts/memory
+      mode: a+x
 
   - name: execute spotify.py
     file:
       dest: /home/fred/.config/i3/scripts/spotify.py
-      mode: u+x
+      mode: a+x
 
   - name: execute volume
     file:
       dest: /home/fred/.config/i3/scripts/volume
-      mode: u+x
+      mode: a+x
 
   - name: Add ansible user
     user:
