@@ -148,6 +148,11 @@
       owner: fred
       group: fred
 
+  - name: execute spotify.sh
+    file:
+      dest: /home/fred/.config/i3/scripts/spotify.sh
+      mode: u+x
+
   - name: Add ansible user
     user:
       name: velociraptor
