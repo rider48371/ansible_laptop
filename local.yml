@@ -148,9 +148,9 @@
       owner: fred
       group: fred
 
-  - name: execute spotify.sh
+  - name: execute spotify.py
     file:
-      dest: /home/fred/.config/i3/scripts/spotify.sh
+      dest: /home/fred/.config/i3/scripts/spotify.py
       mode: u+x
 
   - name: Add ansible user
