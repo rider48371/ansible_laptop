@@ -151,7 +151,7 @@
   - name: execute spotify.py
     file:
       dest: /home/fred/.config/i3/scripts/spotify.py
-      mode: a+x
+      mode: u+x
 
   - name: Add ansible user
     user:
