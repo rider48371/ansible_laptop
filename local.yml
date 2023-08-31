@@ -148,9 +148,38 @@
       owner: fred
       group: fred
 
+  - name: execute arch-update
+    file:
+      dest: /home/fred/.config/i3/scripts/arch-update
+      mode: u+x
+
+  - name: execute battery2
+    file:
+      dest: /home/fred/.config/i3/scripts/battery2
+      mode: u+x
+
+  - name: execute calendar
+    file:
+      dest: /home/fred/.config/i3/scripts/calendar
+      mode: u+x
+
+  - name: execute disk
+    file:
+      dest: /home/fred/.config/i3/scripts/disk
+      mode: u+x
+
+  - name: execute memory
+    file:
+      dest: /home/fred/.config/i3/scripts/memory
+
   - name: execute spotify.py
     file:
       dest: /home/fred/.config/i3/scripts/spotify.py
+      mode: u+x
+
+  - name: execute volume
+    file:
+      dest: /home/fred/.config/i3/scripts/volume
       mode: u+x
 
   - name: Add ansible user
