@@ -40,8 +40,6 @@
         - dmenu
         - rofi
         - firefox
-        - xmonad
-        - xmonad-contrib
         - i3
         - i3blocks
         - network-manager-applet
@@ -49,8 +47,6 @@
         - acpi
         - python3
         - i3lock
-        - xmobar
-        - trayer
         - qtile
         - python-dbus-next
         - tigervnc
@@ -139,13 +135,6 @@
   - name: Copy wallpapers
     copy:
       src: files/wallpapers
-      dest: /home/fred
-      owner: fred
-      group: fred
-
-  - name: Copy xmonad
-    copy:
-      src: files/xmonad
       dest: /home/fred
       owner: fred
       group: fred
