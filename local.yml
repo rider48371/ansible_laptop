@@ -33,6 +33,7 @@
         - thunderbird
         - nitrogen
         - feh
+        - tmux
         - cronie
         - openssh
         - xterm
