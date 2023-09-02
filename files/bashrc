@@ -155,6 +155,11 @@ alias tobash="sudo chsh $USER -s /bin/bash && echo 'Now log out.'"
 alias tozsh="sudo chsh $USER -s /bin/zsh && echo 'Now log out.'"
 alias tofish="sudo chsh $USER -s /bin/fish && echo 'Now log out.'"
 
+#ssh into computers
+alias sshmain="ssh fred@192.168.1.163"
+alias sshbedroom="ssh fred@192.168.1.162"
+alias sshlivingroom="ssh fred@192.168.1.161"
+
 ### Run Neofetch ***
  neofetch
 
