@@ -5,6 +5,7 @@ export TERM="xterm-256color"                      # getting proper colors
 export HISTCONTROL=ignoredups:erasedups           # no duplicate entries
 export VISUAL=nvim;
 export EDITOR=nvim;
+export PATH=$PATH:/home/fred/.local/bin
 
 ### SET MANPAGER
 ### Uncomment only one of these!
