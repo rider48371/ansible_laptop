@@ -69,6 +69,9 @@ bindsym $mod+Shift+m exec caprine
 #rofi emoji selector
 bindsym $mod+Shift+e exec rofi -show emoji
 
+#rofi calculator
+bindsym $mod+c exec rofi -show calc -modi calc -no-show-match -no-sort
+
 # start dmenu (a program launcher)
 #bindsym $mod+d exec --no-startup-id dmenu_run
 bindsym $mod+Shift+p exec rofi -show drun
