@@ -78,6 +78,12 @@
       state: started
       enabled: yes
 
+  - name: Start bluetooth.service
+    service:
+      name: bluetooth.service
+      state: started
+      enabled: yes
+
   - name: Copy alacritty
     copy:
       src: files/alacritty
