@@ -111,6 +111,21 @@
       group: fred
       mode: a+x
 
+  - name: Copy power.rasi
+    copy:
+      src: files/rofi/power.rasi
+      dest: /home/fred/rofi
+      owner: fred
+      group: fred
+
+  - name: Copy powermenu
+    copy:
+      src: files/powermenu
+      dest: /home/fred/.local/bin
+      owner: fred
+      group: fred
+      mode: a+x
+
   - name: Copy qtile
     copy:
       src: files/qtile
