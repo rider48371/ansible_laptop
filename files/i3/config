@@ -66,6 +66,9 @@ bindsym $mod+Shift+b exec firefox
 #start Caprine
 bindsym $mod+Shift+m exec caprine
 
+#rofi emoji selector
+bindsym $mod+Shift+e exec rofi -show emoji
+
 # start dmenu (a program launcher)
 #bindsym $mod+d exec --no-startup-id dmenu_run
 bindsym $mod+Shift+p exec rofi -show drun
