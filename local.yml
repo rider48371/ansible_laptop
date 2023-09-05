@@ -118,6 +118,13 @@
       owner: fred
       group: fred
 
+  - name: Copy rofi
+    copy:
+      src: files/rofi
+      dest: /home/fred/.config
+      owner: fred
+      group: fred
+
   - name: Copy tmux.conf
     copy:
       src: files/tmux.conf
