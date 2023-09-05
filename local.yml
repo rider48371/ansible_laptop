@@ -164,6 +164,14 @@
       owner: fred
       group: fred
 
+  - name: Copy wifimenu
+    copy:
+      src: files/wifimenu
+      dest: /home/fred/.local/bin
+      owner: fred
+      group: fred
+      mode: a+x
+
   - name: execute arch-update
     file:
       dest: /home/fred/.config/i3/scripts/arch-update
