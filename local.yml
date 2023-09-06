@@ -120,6 +120,13 @@
       group: fred
       mode: a+x
 
+  - name: Copy picom
+    copy:
+      src: files/picom
+      dest: /home/fred/.config
+      owner: fred
+      group: fred
+
   - name: Copy power.rasi
     copy:
       src: files/rofi/power.rasi
