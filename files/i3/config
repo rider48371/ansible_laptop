@@ -73,7 +73,7 @@ bindsym $mod+Shift+e exec rofi -show emoji
 bindsym $mod+Shift+x exec rofi -show calc -modi calc -no-show-match -no-sort
 
 #rofi wifimenu
-bindsym $mod+Shift+w exec wifimenu
+bindsym $mod+Shift+w exec /home/fred/.local/bin/wifimenu
 
 # start dmenu (a program launcher)
 #bindsym $mod+d exec --no-startup-id dmenu_run
