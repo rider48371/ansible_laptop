@@ -158,7 +158,7 @@
   - name: Copy tmux.conf
     copy:
       src: files/tmux.conf
-      dest: /home/fred/.config
+      dest: /home/fred/.tmux.conf
       owner: fred
       group: fred
 
