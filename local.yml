@@ -184,6 +184,14 @@
       group: fred
       mode: a+x
 
+  - name: Copy yay.sh
+    copy:
+      src: files/yay.sh
+      dest: /home/fred/.local/bin
+      owner: fred
+      group: fred
+      mode: a+x
+
   - name: execute arch-update
     file:
       dest: /home/fred/.config/i3/scripts/arch-update
