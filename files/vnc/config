@@ -1,5 +1,5 @@
 session=i3
-#session=plasma
+#session=qtile
 #session=xmonad
 geometry=1920x1080
 #localhost
