@@ -64,7 +64,6 @@
         - ttf-mononoki-nerd
         - lxappearance
         - xdotool
-        - picom
 
   - name: Start SSHD
     service:
