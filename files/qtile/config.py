@@ -73,7 +73,7 @@ keys = [
              desc='messenger'
              ),
          Key([mod, "shift"], "x",
-            lazy.spawn(rofi -show calc -modi calc - no-show-match -no-sort),
+            lazy.spawn("rofi -show calc -modi calc - no-show-match -no-sort"),
              desc='calc'
              ),
          ### Window controls
