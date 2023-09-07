@@ -25,8 +25,20 @@ keys = [
              desc='Launches My Terminal'
              ),
          Key([mod, "shift"], "Return",
-             lazy.spawn("rofi -show run"),
+             lazy.spawn("rofi -show drun"),
              desc='Run Launcher'
+             ),
+         Key([mod, "shift"], "p",
+             lazy.spawn("rofi -show run"),
+             desc='Run Show Launcher'
+             ),
+         Key([mod, "shift"], "e",
+             lazy.spawn("rofi -show emoji"),
+             desc='emoji'
+             ),
+         Key([mod, "shift"], "w",
+             lazy.spawn("/home/fred/.local/bin/wifimenu"),
+             desc='Wifi Selector'
              ),
          Key([mod, "shift"], "b",
              lazy.spawn(myBrowser),
@@ -55,6 +67,14 @@ keys = [
          Key([mod, "shift"], "f",
              lazy.spawn("alacritty -e ranger"),
              desc='Ranger'
+             ),
+         Key([mod, "shift"], "m",
+             lazy.spawn("caprine"),
+             desc='messenger'
+             ),
+         Key([mod, "shift"], "x",
+            lazy.spawn(rofi -show calc -modi calc - no-show-match -no-sort),
+             desc='calc'
              ),
          ### Window controls
          Key([mod], "j",
@@ -117,16 +137,16 @@ keys = [
              ),
 ]
 
-groups = [Group("DEV", layout='monadtall'),
-          Group("WWW", layout='monadtall'),
-          Group("SYS", layout='monadtall'),
-          Group("SYS", layout='monadtall'),
-          Group("DOC", layout='monadtall'),
-          Group("VBOX", layout='monadtall'),
-          Group("CHAT", layout='monadtall'),
-          Group("MUS", layout='monadtall'),
-          Group("VID", layout='monadtall'),
-          Group("GFX", layout='floating')]
+groups = [Group("Alacritty", layout='monadtall', matches=[Match(wm_class=["Alacritty"])]),
+          Group("Firefox", layout='monadtall', matches=[Match(wm_class=["firefox"])]),
+          Group("Chat", layout='monadtall', matches=[Match(wm_class=["Caprine"])]),
+          Group("Music", layout='monadtall', matches=[Match(wm_class=["Spotify"])]),
+          Group("Plex", layout='monadtall', matches=[Match(wm_class=["plexmediaplayer"])]),
+          Group("Email", layout='monadtall', matches=[Match(wm_class=[thunderbird])]),
+          Group("7", layout='monadtall'),
+          Group("8", layout='monadtall'),
+          Group("9", layout='monadtall'),
+          Group("10", layout='monadtall')]
 
 # Allow MODKEY+[0 through 9] to bind to groups, see https://docs.qtile.org/en/stable/manual/config/groups.html
 # MOD4 + index Number : Switch to Group[index]
