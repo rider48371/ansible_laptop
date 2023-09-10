@@ -1,8 +1,5 @@
 #!/usr/bin/env bash 
 
-#COLORSCHEME="DoomOne"
-
-#festival --tts $HOME/.config/qtile/welcome_msg &
 lxsession &
 picom &
 volumeicon &
