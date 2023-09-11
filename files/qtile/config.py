@@ -36,6 +36,10 @@ keys = [
              lazy.spawn("rofi -show emoji"),
              desc='emoji'
              ),
+         Key([mod], "b",
+             lazy.spawn("rofi-bluetooth"),
+             desc='bluetooth'
+             ),
          Key([mod, "shift"], "w",
              lazy.spawn("/home/fred/.local/bin/wifimenu"),
              desc='Wifi Selector'
