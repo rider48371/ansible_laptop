@@ -63,6 +63,9 @@ bindsym $mod+Shift+f exec alacritty -e ranger
 #start firefox
 bindsym $mod+Shift+b exec firefox
 
+#rofi-bluetooth
+bindsym $mod+b exec rofi-bluetooth
+
 #start Caprine
 bindsym $mod+Shift+m exec caprine
 
