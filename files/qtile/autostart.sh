@@ -2,10 +2,8 @@
 
 lxsession &
 picom &
-volumeicon &
-nm-applet &
-blueberry-tray &
 ~/Documents/onedrive &
+caprine &
 
 ### UNCOMMENT ONLY ONE OF THE FOLLOWING THREE OPTIONS! ###
 # 1. Uncomment to restore last saved wallpaper
