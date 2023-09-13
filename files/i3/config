@@ -75,6 +75,9 @@ bindsym $mod+Shift+e exec rofi -show emoji
 #rofi calculator
 bindsym $mod+Shift+x exec rofi -show calc -modi calc -no-show-match -no-sort
 
+#clipmenu
+bindsym $mod+x exec clipmenu
+
 #rofi wifimenu
 bindsym $mod+Shift+w exec /home/fred/.local/bin/wifimenu
 
