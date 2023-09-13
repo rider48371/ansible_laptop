@@ -20,6 +20,7 @@
         - vim
         - alacritty
         - conky
+        - clipmenu
         - starship
         - ranger
         - exa
@@ -108,6 +109,13 @@
     copy:
       src: files/i3
       dest: /home/fred/.config
+      owner: fred
+      group: fred
+
+  - name: copy .local/bin
+    copy:
+      src: files/.local/bin
+      dest: /home/fred/.local
       owner: fred
       group: fred
 
@@ -217,6 +225,11 @@
       dest: /home/fred/.config/i3/scripts/memory
       mode: a+x
 
+  - name: execute powermenu
+    file:
+      dest: /home/fred/.local/bin/powermenu
+      mode: a+x
+
   - name: execute spotify.py
     file:
       dest: /home/fred/.config/i3/scripts/spotify.py
@@ -230,6 +243,16 @@
   - name: execute qtile autostart.sh
     file:
       dest: /home/fred/.config/qtile/autostart.sh
+      mode: a+x
+
+  - name: execute wifimenu
+    file:
+      dest: /home/fred/.local/bin/wifimenu
+      mode: a+x
+
+  - name: execute yay.sh
+    file:
+      dest: /home/fred/.local/bin/yay.sh
       mode: a+x
 
   - name: Add ansible user
