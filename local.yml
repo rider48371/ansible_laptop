@@ -50,7 +50,6 @@
         - blueberry
         - acpi
         - python3
-        - i3lock
         - qtile
         - python-dbus-next
         - tigervnc
@@ -111,6 +110,14 @@
       dest: /home/fred/.config
       owner: fred
       group: fred
+
+  - name: Copy i3lock-solarized-dark.sh
+    copy:
+      src: files/i3lock-solarized-dark.sh
+      dest: /home/fred/.local/bin/i3lock-solarized-dark.sh
+      owner: fred
+      group: fred
+      mode: a+x
 
   - name: Copy onedrive
     copy:
