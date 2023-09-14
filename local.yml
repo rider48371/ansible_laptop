@@ -46,6 +46,7 @@
         - firefox
         - i3
         - i3blocks
+        - i3lock
         - network-manager-applet
         - blueberry
         - acpi
