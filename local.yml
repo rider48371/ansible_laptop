@@ -112,13 +112,6 @@
       owner: fred
       group: fred
 
-  - name: copy .local/bin
-    copy:
-      src: files/.local/bin
-      dest: /home/fred/.local
-      owner: fred
-      group: fred
-
   - name: Copy onedrive
     copy:
       src: files/onedrive
