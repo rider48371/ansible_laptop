@@ -65,7 +65,7 @@ keys = [
              desc='Restart Qtile'
              ),
          Key([mod, "shift"], "q",
-             lazy.spawn(rofi -show power-menu -modi power-menu:/home/fred/.local/bin/powermenu),
+             lazy.spawn("rofi -show power-menu -modi power-menu:/home/fred/.local/bin/powermenu"),
              desc='powermenu'
              ),
          Key([mod, "shift"], "f",
