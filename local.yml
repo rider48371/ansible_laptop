@@ -127,16 +127,9 @@
       owner: fred
       group: fred
 
-  - name: Copy power.rasi
-    copy:
-      src: files/rofi/power.rasi
-      dest: /home/fred/rofi
-      owner: fred
-      group: fred
-
   - name: Copy powermenu
     copy:
-      src: files/powermenu
+      src: files/.local/bin/powermenu
       dest: /home/fred/.local/bin
       owner: fred
       group: fred
@@ -179,7 +172,7 @@
 
   - name: Copy wifimenu
     copy:
-      src: files/wifimenu
+      src: files/.local/bin/wifimenu
       dest: /home/fred/.local/bin
       owner: fred
       group: fred
@@ -187,7 +180,7 @@
 
   - name: Copy yay.sh
     copy:
-      src: files/yay.sh
+      src: files/.local/bin/yay.sh
       dest: /home/fred/.local/bin
       owner: fred
       group: fred
