@@ -44,14 +44,14 @@ keys = [
              lazy.spawn("/home/fred/.local/bin/wifimenu"),
              desc='Wifi Selector'
              ),
+         Key([mod], "x",
+             lazy.spawn("clipmenu"),
+             desc='clipmenu'
+             ),
          Key([mod, "shift"], "b",
              lazy.spawn(myBrowser),
              desc='Firefox'
              ),
-         # Key([mod], "/",
-         #     lazy.spawn("dtos-help"),
-         #     desc='DTOS Help'
-         #     ),
          Key([mod], "Tab",
              lazy.next_layout(),
              desc='Toggle through layouts'
@@ -65,8 +65,8 @@ keys = [
              desc='Restart Qtile'
              ),
          Key([mod, "shift"], "q",
-             lazy.shutdown(),
-             desc='Shutdown Qtile'
+             lazy.spawn("rofi -show power-menu -modi power-menu:/home/fred/.local/bin/powermenu"),
+             desc='powermenu'
              ),
          Key([mod, "shift"], "f",
              lazy.spawn("alacritty -e ranger"),

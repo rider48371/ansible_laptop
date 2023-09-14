@@ -51,7 +51,6 @@
         - blueberry
         - acpi
         - python3
-        - i3lock
         - qtile
         - python-dbus-next
         - tigervnc
