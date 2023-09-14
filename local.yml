@@ -46,6 +46,7 @@
         - firefox
         - i3
         - i3blocks
+        - i3lock
         - network-manager-applet
         - blueberry
         - acpi
@@ -110,14 +111,6 @@
       dest: /home/fred/.config
       owner: fred
       group: fred
-
-  - name: Copy i3lock-solarized-dark.sh
-    copy:
-      src: files/i3lock-solarized-dark.sh
-      dest: /home/fred/.local/bin/i3lock-solarized-dark.sh
-      owner: fred
-      group: fred
-      mode: a+x
 
   - name: Copy onedrive
     copy:
