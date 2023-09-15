@@ -172,7 +172,7 @@ assign [class="Alacritty"] 1 Alacritty
 assign [class="firefox"] 2 Firefox
 assign [class="Caprine"] 3 Chat
 assign [class="Spotify"] 4 Spotify
-assign [class="plexmediaplayer"] 5 Plex
+assign [class="Plex"] 5 Plex
 assign [class="thunderbird"] 6 Email
 
 # reload the configuration file
