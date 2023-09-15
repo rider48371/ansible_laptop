@@ -112,6 +112,14 @@
       owner: fred
       group: fred
 
+  - name: Copy nfs.sh
+    copy:
+      src: files/nfs.sh
+      dest: /home/fred/.local/bin
+      owner: fred
+      group: fred
+      mode: a+x
+
   - name: Copy onedrive
     copy:
       src: files/onedrive
