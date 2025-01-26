@@ -72,6 +72,11 @@
         - winetricks
         - lutris
 
+  - name: Create Github folder
+    ansible.builtin.file:
+      path: /home/fred/Github
+      state: directory
+
   - name: Start SSHD
     service:
       name: sshd
