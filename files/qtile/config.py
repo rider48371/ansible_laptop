@@ -5,7 +5,7 @@ import socket
 import subprocess
 from libqtile import qtile
 from libqtile.config import Click, Drag, Group, KeyChord, Key, Match, Screen
-from libqtile.command import lazy
+from libqtile.lazy import lazy
 from libqtile import layout, bar, widget, hook
 from libqtile.lazy import lazy
 from libqtile.utils import guess_terminal
@@ -16,7 +16,7 @@ from qtile_extras.widget.decorations import BorderDecoration
 
 mod = "mod4"              # Sets mod key to SUPER/WINDOWS
 myTerm = "alacritty"      # My terminal of choice
-myBrowser = "firefox" # My browser of choice
+myBrowser = "google-chrome-stable" # My browser of choice
 
 keys = [
          ### The essentials
@@ -48,9 +48,13 @@ keys = [
              lazy.spawn("clipmenu"),
              desc='clipmenu'
              ),
+        Key([mod, "shift"], "s",
+            lazy.spawn("flameshot gui"),
+            desc='flameshot'
+            ),
          Key([mod, "shift"], "b",
              lazy.spawn(myBrowser),
-             desc='Firefox'
+             desc='Google Chrome'
              ),
          Key([mod], "Tab",
              lazy.next_layout(),
@@ -142,12 +146,12 @@ keys = [
 ]
 
 groups = [Group("Alacritty", layout='monadtall', matches=[Match(wm_class=["Alacritty"])]),
-          Group("Firefox", layout='monadtall', matches=[Match(wm_class=["firefox"])]),
+          Group("Chrome", layout='monadtall', matches=[Match(wm_class=["Google-chrome"])]),
           Group("Chat", layout='monadtall', matches=[Match(wm_class=["Caprine"])]),
           Group("Music", layout='monadtall', matches=[Match(wm_class=["Spotify"])]),
           Group("Plex", layout='monadtall', matches=[Match(wm_class=["Plex"])]),
           Group("Email", layout='monadtall', matches=[Match(wm_class=["thunderbird"])]),
-          Group("7", layout='monadtall'),
+          Group("Code", layout='monadtall', matches=[Match(wm_class=["Code"])]),
           Group("8", layout='monadtall'),
           Group("9", layout='monadtall'),
           Group("10", layout='monadtall')]

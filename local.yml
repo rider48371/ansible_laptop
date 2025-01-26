@@ -65,6 +65,12 @@
         - ttf-mononoki-nerd
         - lxappearance
         - xdotool
+        - kodi
+        - emacs
+        - steam
+        - wine
+        - winetricks
+        - lutris
 
   - name: Start SSHD
     service:
