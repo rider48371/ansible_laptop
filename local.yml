@@ -131,6 +131,13 @@
       group: fred
       mode: a+x
 
+  - name: Copy mimeapps.list
+    copy:
+      src: files/.local/share/applications/mimeapps.list
+      dest: /home/fred/.local/shre/applications
+      owner: fred
+      group: fred
+
   - name: Copy onedrive
     copy:
       src: files/onedrive
