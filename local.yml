@@ -238,7 +238,7 @@
   - name: Copy yay.sh
     copy:
       src: files/.local/bin/yay.sh
-      dest: /home/fred/.local/bin/yay.sh
+      dest: /home/fred/.local/share/bin/yay.sh
       owner: fred
       group: fred
       mode: a+x
