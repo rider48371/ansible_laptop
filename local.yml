@@ -100,7 +100,7 @@
       
   - name: Make Public folder
     ansible.builtin.file:
-      path: /home/fred/nas/kari
+      path: /home/fred/nas/public
       state: directory     
 
   - name: Start SSHD
@@ -152,7 +152,7 @@
   - name: Copy nfs.sh
     copy:
       src: files/nfs.sh
-      dest: /home/fred/.local/bin/nfs.sh
+      dest: /home/fred/.local/share/bin/nfs.sh
       owner: fred
       group: fred
       mode: a+x
