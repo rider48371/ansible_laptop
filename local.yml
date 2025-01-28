@@ -135,7 +135,7 @@
   - name: Copy mimeapps.list
     copy:
       src: files/.local/share/applications/mimeapps.list
-      dest: /home/fred/.local/shre/applications
+      dest: /home/fred/.local/share/applications
       owner: fred
       group: fred
 
