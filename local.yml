@@ -78,9 +78,9 @@
       path: /home/fred/Github
       state: directory
       
-  - name: Make .local/share/bin
+  - name: Make .local/bin
     ansible.builtin.file:
-      path: /home/fred/.local/share/bin
+      path: /home/fred/.local/bin
       state: directory
       
   - name: Make nas directory
@@ -157,7 +157,7 @@
   - name: Copy nfs.sh
     copy:
       src: files/nfs.sh
-      dest: /home/fred/.local/share/bin/nfs.sh
+      dest: /home/fred/.local/bin/nfs.sh
       owner: fred
       group: fred
       mode: a+x
@@ -238,7 +238,7 @@
   - name: Copy yay.sh
     copy:
       src: files/.local/bin/yay.sh
-      dest: /home/fred/.local/share/bin/yay.sh
+      dest: /home/fred/.local/bin/yay.sh
       owner: fred
       group: fred
       mode: a+x
