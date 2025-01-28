@@ -80,7 +80,7 @@
       
   - name: Make .local/share/bin
     ansible.builtin.file:
-      path: /home/fred/.local/share
+      path: /home/fred/.local/share/bin
       state: directory 
 
   - name: Start SSHD
