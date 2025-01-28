@@ -13,4 +13,4 @@ picom &
 # 3. Uncomment to set wallpaper with nitrogen
 # nitrogen --restore &
 # 4. Uncomment to set random wallpaper with feh
-feh --bg-fill --randomize /home/fred/wallpapers/* &
+feh --bg-fill --randomize /home/fred/Pictures/wallpapers/* &

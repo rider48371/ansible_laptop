@@ -198,7 +198,7 @@
   - name: Copy wallpapers
     copy:
       src: files/wallpapers
-      dest: /home/fred
+      dest: /home/fred/Pictures
       owner: fred
       group: fred
 
