@@ -101,7 +101,12 @@
   - name: Make Public folder
     ansible.builtin.file:
       path: /home/fred/nas/public
-      state: directory     
+      state: directory
+      
+  - name: Make .local/share/applications folder
+    ansible.builtin.file:
+      path: /home/fred/.local/share/applications
+      state: directory 
 
   - name: Start SSHD
     service:
