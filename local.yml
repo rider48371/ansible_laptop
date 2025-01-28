@@ -77,6 +77,11 @@
     ansible.builtin.file:
       path: /home/fred/Github
       state: directory
+      
+  - name: Make .local/share/bin
+    ansible.builtin.file:
+      path: /home/fred/.local/share
+      state: directory 
 
   - name: Start SSHD
     service:
