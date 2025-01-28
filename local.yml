@@ -81,7 +81,27 @@
   - name: Make .local/share/bin
     ansible.builtin.file:
       path: /home/fred/.local/share/bin
-      state: directory 
+      state: directory
+      
+  - name: Make nas directory
+    ansible.builtin.file:
+      path: /home/fred/nas
+      state: directory
+      
+  - name: Make Fred folder
+    ansible.builtin.file:
+      path: /home/fred/nas/fred
+      state: directory
+      
+  - name: Make Kari directory
+    ansible.builtin.file:
+      path: /home/fred/nas/kari
+      state: directory
+      
+  - name: Make Public folder
+    ansible.builtin.file:
+      path: /home/fred/nas/kari
+      state: directory     
 
   - name: Start SSHD
     service:
