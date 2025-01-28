@@ -132,7 +132,7 @@
   - name: Copy nfs.sh
     copy:
       src: files/nfs.sh
-      dest: /home/fred/.local/bin
+      dest: /home/fred/.local/bin/nfs.sh
       owner: fred
       group: fred
       mode: a+x
@@ -140,14 +140,14 @@
   - name: Copy mimeapps.list
     copy:
       src: files/.local/share/applications/mimeapps.list
-      dest: /home/fred/.local/share/applications
+      dest: /home/fred/.local/share/applications/mimeapps.list
       owner: fred
       group: fred
 
   - name: Copy onedrive
     copy:
       src: files/onedrive
-      dest: /home/Documents
+      dest: /home/Documents/onedrive
       owner: fred
       group: fred
       mode: a+x
@@ -162,7 +162,7 @@
   - name: Copy powermenu
     copy:
       src: files/.local/bin/powermenu
-      dest: /home/fred/.local/bin
+      dest: /home/fred/.local/bin/powermenu
       owner: fred
       group: fred
       mode: a+x
@@ -205,7 +205,7 @@
   - name: Copy wifimenu
     copy:
       src: files/.local/bin/wifimenu
-      dest: /home/fred/.local/bin
+      dest: /home/fred/.local/bin/wifimenu
       owner: fred
       group: fred
       mode: a+x
@@ -213,7 +213,7 @@
   - name: Copy yay.sh
     copy:
       src: files/.local/bin/yay.sh
-      dest: /home/fred/.local/bin
+      dest: /home/fred/.local/bin/yay.sh
       owner: fred
       group: fred
       mode: a+x
