@@ -149,7 +149,7 @@ groups = [Group("Alacritty", layout='monadtall', matches=[Match(wm_class=["Alacr
           Group("Chrome", layout='monadtall', matches=[Match(wm_class=["Google-chrome"])]),
           Group("Chat", layout='monadtall', matches=[Match(wm_class=["Messenger"])]),
           Group("Music", layout='monadtall', matches=[Match(wm_class=["Spotify"])]),
-          Group("Plex", layout='monadtall', matches=[Match(wm_class=["Plex"])]),
+          Group("Video", layout='monadtall', matches=[Match(wm_class=["Plex"])]),
           Group("Email", layout='monadtall', matches=[Match(wm_class=["thunderbird"])]),
           Group("Code", layout='monadtall', matches=[Match(wm_class=["Code"])]),
           Group("8", layout='monadtall'),

@@ -67,7 +67,7 @@ bindsym $mod+Shift+b exec firefox
 bindsym $mod+b exec rofi-bluetooth
 
 #start Caprine
-bindsym $mod+Shift+m exec caprine
+bindsym $mod+Shift+m exec messenger-nativefier
 
 #rofi emoji selector
 bindsym $mod+Shift+e exec rofi -show emoji
@@ -149,9 +149,9 @@ bindsym $mod+1 workspace number 1 Alacritty
 bindsym $mod+2 workspace number 2 Chrome
 bindsym $mod+3 workspace number 3 Chat
 bindsym $mod+4 workspace number 4 Music
-bindsym $mod+5 workspace number 5 Plex
+bindsym $mod+5 workspace number 5 Video
 bindsym $mod+6 workspace number 6 Email
-bindsym $mod+7 workspace number 7
+bindsym $mod+7 workspace number 7 Code
 bindsym $mod+8 workspace number 8
 bindsym $mod+9 workspace number 9
 bindsym $mod+0 workspace number 10
@@ -161,18 +161,18 @@ bindsym $mod+Shift+1 move container to workspace number 1 Alacritty
 bindsym $mod+Shift+2 move container to workspace number 2 Chrome
 bindsym $mod+Shift+3 move container to workspace number 3 Chat
 bindsym $mod+Shift+4 move container to workspace number 4 Spotify
-bindsym $mod+Shift+5 move container to workspace number 5 Plex
+bindsym $mod+Shift+5 move container to workspace number 5 Video
 bindsym $mod+Shift+6 move container to workspace number 6 Email
-bindsym $mod+Shift+7 move container to workspace number 7
+bindsym $mod+Shift+7 move container to workspace number 7 Code
 bindsym $mod+Shift+8 move container to workspace number 8
 bindsym $mod+Shift+9 move container to workspace number 9
 bindsym $mod+Shift+0 move container to workspace number 10
 
 assign [class="Alacritty"] 1 Alacritty
 assign [class="google-chrome-stable"] 2 Chrome
-assign [class="Caprine"] 3 Chat
+assign [class="Messenger"] 3 Chat
 assign [class="Spotify"] 4 Spotify
-assign [class="Plex"] 5 Plex
+assign [class="Plex"] 5 Video
 assign [class="thunderbird"] 6 Email
 
 # reload the configuration file
