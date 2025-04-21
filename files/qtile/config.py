@@ -32,10 +32,6 @@ keys = [
              lazy.spawn("rofi -show run"),
              desc='Run Show Launcher'
              ),
-         Key([mod, "shift"], "s",
-             lazy.spawn("spectacle -r"),
-             desc='screenshot'
-             )
          Key([mod, "shift"], "e",
              lazy.spawn("rofi -show emoji"),
              desc='emoji'
