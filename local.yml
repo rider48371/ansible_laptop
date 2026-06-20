@@ -19,6 +19,7 @@
         - vim
         - alacritty
         - conky
+        - fastfetch
         - clipmenu
         - starship
         - ranger
