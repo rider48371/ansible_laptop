@@ -45,7 +45,6 @@
         - i3blocks
         - i3lock
         - network-manager-applet
-        - blueberry
         - acpi
         - python3
         - qtile
