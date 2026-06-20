@@ -8,8 +8,6 @@
     package:
       name:
         - htop
-        - vulkan-nouveau
-        - lib32-vulkan-nouveau
         - xclip
         - lxsession
         - volumeicon
@@ -22,13 +20,13 @@
         - alacritty
         - conky
         - clipmenu
-        - flameshot
         - starship
         - ranger
         - exa
         - gparted
         - okular
         - vlc
+        - code
         - dolphin
         - dunst
         - neofetch
@@ -47,6 +45,7 @@
         - firefox
         - i3
         - i3blocks
+        - i3lock
         - network-manager-applet
         - blueberry
         - acpi
@@ -63,10 +62,9 @@
         - ttf-sourcecodepro-nerd
         - ttf-ubuntu-font-family
         - ttf-mononoki-nerd
+        - ttf-jetbrains-mono-nerd
         - lxappearance
         - xdotool
-        - kodi
-        - emacs
         - steam
         - wine
         - winetricks
@@ -80,26 +78,6 @@
   - name: Make .local/bin
     ansible.builtin.file:
       path: /home/fred/.local/bin
-      state: directory
-      
-  - name: Make nas directory
-    ansible.builtin.file:
-      path: /home/fred/nas
-      state: directory
-      
-  - name: Make Fred folder
-    ansible.builtin.file:
-      path: /home/fred/nas/fred
-      state: directory
-      
-  - name: Make Kari directory
-    ansible.builtin.file:
-      path: /home/fred/nas/kari
-      state: directory
-      
-  - name: Make Public folder
-    ansible.builtin.file:
-      path: /home/fred/nas/public
       state: directory
       
   - name: Make .local/share/applications folder
@@ -153,28 +131,12 @@
       owner: fred
       group: fred
 
-  - name: Copy nfs.sh
-    copy:
-      src: files/nfs.sh
-      dest: /home/fred/.local/bin/nfs.sh
-      owner: fred
-      group: fred
-      mode: a+x
-
   - name: Copy mimeapps.list
     copy:
       src: files/.local/share/applications/mimeapps.list
       dest: /home/fred/.local/share/applications/mimeapps.list
       owner: fred
       group: fred
-
-  - name: Copy onedrive
-    copy:
-      src: files/onedrive
-      dest: /home/Documents
-      owner: fred
-      group: fred
-      mode: a+x
 
   - name: Copy picom
     copy:

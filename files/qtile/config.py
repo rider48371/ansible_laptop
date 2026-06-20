@@ -32,6 +32,10 @@ keys = [
              lazy.spawn("rofi -show run"),
              desc='Run Show Launcher'
              ),
+         Key([mod], "e",
+             lazy.spawn("emacsclient -nc"),
+             desc='open emacs'
+             ),
          Key([mod, "shift"], "e",
              lazy.spawn("rofi -show emoji"),
              desc='emoji'
@@ -147,12 +151,12 @@ keys = [
 
 groups = [Group("Alacritty", layout='monadtall', matches=[Match(wm_class=["Alacritty"])]),
           Group("Chrome", layout='monadtall', matches=[Match(wm_class=["Google-chrome"])]),
-          Group("Chat", layout='monadtall', matches=[Match(wm_class=["Messenger"])]),
+          Group("Chat", layout='monadtall', matches=[Match(wm_class=["googlemessages-nativefier-11f104","facebookmessenger-nativefier-7ab88e"])]),
           Group("Music", layout='monadtall', matches=[Match(wm_class=["Spotify"])]),
           Group("Video", layout='monadtall', matches=[Match(wm_class=["Plex"])]),
-          Group("Email", layout='monadtall', matches=[Match(wm_class=["thunderbird"])]),
-          Group("Code", layout='monadtall', matches=[Match(wm_class=["Code"])]),
-          Group("8", layout='monadtall'),
+          Group("Email", layout='monadtall', matches=[Match(wm_class=["org.mozilla.Thunderbird"])]),
+          Group("Code", layout='monadtall', matches=[Match(wm_class=["Code","Emacs"])]),
+          Group("8", layout='monadtall', matches=[Match(wm_class=["vibe-typer"])]),
           Group("9", layout='monadtall'),
           Group("10", layout='monadtall')]
 
@@ -309,7 +313,7 @@ def init_widgets_list():
                        background = colors[0]
                        ),
              widget.Net(
-                       interface = "enp6s0",
+                       interface = "wlan0",
                        format = 'Net: {down} ↓↑ {up}',
                        foreground = colors[3],
                        background = colors[0],
@@ -467,8 +471,7 @@ def init_widgets_list():
                        foreground = colors[0],
                        background = colors[0]
                        ),
-              widget.Systray(
-                       background = colors[0],
+              widget.StatusNotifier(
                        padding = 5
                        ),
               ]
@@ -479,8 +482,7 @@ widgets_list = init_widgets_list()
 
 
 def init_widgets_screen1():
-    widgets_screen1 = init_widgets_list()
-    return widgets_screen1
+    return init_widgets_list()
 
 
 widgets_screen1 = init_widgets_screen1()

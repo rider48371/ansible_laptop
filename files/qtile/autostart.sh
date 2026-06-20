@@ -1,9 +1,9 @@
-#!/usr/bin/env bash 
+#!/bin/bash
 
+#autostart programs
 lxsession &
-picom &
-~/Documents/onedrive &
-~/Documents/drive &
+picom &> /tmp/picom.log &
+thunderbird &
 
 ### UNCOMMENT ONLY ONE OF THE FOLLOWING THREE OPTIONS! ###
 # 1. Uncomment to restore last saved wallpaper
