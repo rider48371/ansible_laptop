@@ -471,9 +471,6 @@ def init_widgets_list():
                        foreground = colors[0],
                        background = colors[0]
                        ),
-              widget.StatusNotifier(
-                       padding = 5
-                       ),
               ]
     return widgets_list
 
