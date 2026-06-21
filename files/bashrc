@@ -162,7 +162,7 @@ alias sshbedroom="ssh fred@192.168.1.162"
 alias sshlivingroom="ssh fred@192.168.1.161"
 
 ### Run Neofetch ***
- neofetch
+ fastfetch
 
 ### SETTING THE STARSHIP PROMPT ###
 eval "$(starship init bash)"
