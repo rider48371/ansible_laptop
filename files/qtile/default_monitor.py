@@ -151,13 +151,13 @@ keys = [
 ]
 
 groups = [Group("Alacritty", layout='monadtall', matches=[Match(wm_class="Alacritty")]),
-          Group("Chrome", layout='monadtall', matches=[Match(wm_class="Google-chrome")]),
-          Group("Chat", layout='monadtall', matches=[Match(wm_class="googlemessages-nativefier-11f104"), Match(wm_class="facebookmessenger-nativefier-7ab88e")]),
+          Group("Chrome", layout='monadtall', matches=[Match(wm_class="google-chrome")]),
+          Group("Chat", layout='monadtall', matches=[Match(wm_class="crx_hpfldicfbfomlpcikngkocigghgafkph"), Match(wm_class="crx_kippjfofjhjlffjecoapiogbkgbpmgej")]),
           Group("Music", layout='monadtall', matches=[Match(wm_class="Spotify")]),
-          Group("Video", layout='monadtall', matches=[Match(wm_class="Plex")]),
-          Group("Email", layout='monadtall', matches=[Match(wm_class="org.mozilla.Thunderbird")]),
-          Group("Code", layout='monadtall', matches=[Match(wm_class="Code"), Match(wm_class="Emacs")]),
-          Group("8", layout='monadtall', matches=[Match(wm_class="vibe-typer")]),
+          Group("Video", layout='monadtall', matches=[Match(wm_class="iptvnator")]),
+          Group("Email", layout='monadtall', matches=[Match(wm_class="crx_faolnafnngnfdaknnbpnkhgohbobgegn"), Match(wm_class="crx_fmgjjmmmlfnkbppncabfkddbjimcfncm")]),
+          Group("Code", layout='monadtall', matches=[Match(wm_class="Code"), Match(wm_class="claude-desktop")]),
+          Group("8", layout='monadtall'),
           Group("9", layout='monadtall'),
           Group("10", layout='monadtall')]
 

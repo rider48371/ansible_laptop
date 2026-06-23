@@ -167,14 +167,14 @@ keys = [
 # Screen 0 (Laptop):    Alacritty, Chrome, Chat
 # Screen 1 (Ext Mon 1): Music, Video
 # Screen 2 (Ext Mon 2): Email, Code, 8, 9, 10
-groups = [Group("Alacritty", layout='monadtall', matches=[Match(wm_class="Alacritty")],     screen_affinity=0),
-          Group("Chrome",    layout='monadtall', matches=[Match(wm_class="Google-chrome")],  screen_affinity=0),
-          Group("Chat",      layout='monadtall', matches=[Match(wm_class="googlemessages-nativefier-11f104"), Match(wm_class="facebookmessenger-nativefier-7ab88e")], screen_affinity=0),
-          Group("Music",     layout='monadtall', matches=[Match(wm_class="Spotify")],        screen_affinity=1),
-          Group("Video",     layout='monadtall', matches=[Match(wm_class="Plex")],           screen_affinity=1),
-          Group("Email",     layout='monadtall', matches=[Match(wm_class="org.mozilla.Thunderbird")], screen_affinity=2),
-          Group("Code",      layout='monadtall', matches=[Match(wm_class="Code"), Match(wm_class="Emacs")], screen_affinity=2),
-          Group("8",         layout='monadtall', matches=[Match(wm_class="vibe-typer")],     screen_affinity=2),
+groups = [Group("Code", layout='monadtall', matches=[Match(wm_class="Alacritty"), Match(wm_class="claude-desktop"),Match(wm_class="code")],     screen_affinity=0),
+          Group("Chat",    layout='monadtall', matches=[Match(wm_class="crx_hpfldicfbfomlpcikngkocigghgafkph"), Match(wm_class="crx_kippjfofjhjlffjecoapiogbkgbpmgej")],  screen_affinity=0),
+          Group("TV",      layout='monadtall', matches=[Match(wm_class="iptvnator")], screen_affinity=0),
+          Group("Chrome",     layout='monadtall', matches=[Match(wm_class="google-chrome")],        screen_affinity=1),
+          Group("5",     layout='monadtall', screen_affinity=1),
+          Group("Email",     layout='monadtall', matches=[Match(wm_class="crx_faolnafnngnfdaknnbpnkhgohbobgegn"), Match(wm_class="crx_fmgjjmmmlfnkbppncabfkddbjimcfncm")], screen_affinity=2),
+          Group("7",      layout='monadtall', screen_affinity=2),
+          Group("8",         layout='monadtall', screen_affinity=2),
           Group("9",         layout='monadtall',                                             screen_affinity=2),
           Group("10",        layout='monadtall',                                             screen_affinity=2)]
 
